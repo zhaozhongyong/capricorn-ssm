@@ -16,11 +16,11 @@
 		<td>用户名</td>
 		<td>密码</td>
 	</tr>
-	<c:forEach items="${users }" var="bean">
+	<c:forEach items="${students }" var="bean">
 		<tr>
-			<td>${bean.id }</td>
-			<td>${bean.username }</td>
-			<td>${bean.pwd }</td>
+			<td>${bean.stuId }</td>
+			<td>${bean.stuName }</td>
+			<td>${bean.stuAge }</td>
 		</tr>
 	</c:forEach>
 </table>

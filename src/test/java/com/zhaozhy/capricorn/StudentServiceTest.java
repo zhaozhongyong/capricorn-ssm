@@ -8,23 +8,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.zhaozhy.capricorn.dao.UserDao;
-import com.zhaozhy.capricorn.entity.User;
-import com.zhaozhy.capricorn.service.UserService;
+import com.zhaozhy.capricorn.dao.StudentDao;
+import com.zhaozhy.capricorn.entity.Student;
+import com.zhaozhy.capricorn.service.StudentService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:spring/spring-dao.xml","classpath:spring/spring-service.xml"})
-public class UserServiceTest {
+public class StudentServiceTest {
 	@Autowired
-	private UserDao userDao;
+	private StudentDao userDao;
 	@Autowired
-	private UserService userService;
+	private StudentService userService;
 
 	@Test
-	public void testUserDao(){
+	public void testStudentDao(){
 		System.out.println("111");
-		List<User> us=this.userDao.queryAll();
-		for(User u:us){
+		List<Student> us=this.userDao.queryAll();
+		for(Student u:us){
 			System.out.println(u);
 		}
 	}
